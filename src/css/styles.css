@@ -1,0 +1,520 @@
+
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url('../../assets/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins Medium';
+  src: url('../../assets/fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('../../assets/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins SemiBold';
+  src: url('../../assets/fonts/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins Light';
+  src: url('../../assets/fonts/Poppins-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins Thin';
+  src: url('../../assets/fonts/Poppins-Thin.ttf');
+}
+
+:root{
+  --primary: #FCD800;
+  --secondary: #C2C8DA;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins Regular', 'Courier New', Courier, monospace;
+}
+
+*{
+  transition: .3s;
+}
+
+/*
+  REUSEABLE STYLEs
+*/
+
+.btn{
+  padding: 14px 18px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background-color: var(--black);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.btn:hover{
+  opacity: .4;
+}
+
+.btn-medium{
+  padding: 17px 27px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.title-h2{
+  overflow: visible;
+  background-image: url(../../assets/svg/Vector\ 9.svg);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 120px 20px;
+  width: max-content;
+  padding-right: 15px;
+  margin-bottom: 60px;
+  font-size: 25px;
+  font-family: 'Poppins Black';
+}
+
+.filled{
+  position: relative;
+  width: 100%
+}
+
+.filled::before{
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: -20px;
+  position: absolute;
+  z-index: -1;
+  transform-origin: 40% 50%;
+  transform: rotate(-2deg);
+}
+
+.filled.bg-white::before{
+  background-color: var(--white)
+}
+
+.filled.bg-primary::before{
+  background-color: var(--primary)
+}
+
+/*
+  END OF REUSEABLE STYLEs
+*/
+
+
+/*
+  HEADER & BANNER
+*/
+
+body > header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+header > .logo{
+  height: 40px;
+}
+
+header > nav{
+  display: flex;
+  align-items: center;
+}
+
+header > nav > ul{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-right: 20px;
+  height: 44px;
+}
+
+header > nav > ul li{
+  height: 100%;
+}
+
+header > nav > ul > li > a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 15px;
+  margin: 0px 5px;
+  height: 100%;
+  /* border-radius: 5px; */
+}
+
+header > nav > ul > li > a:hover{
+  background-color: var(--primary);
+  /* color: var(--white); */
+}
+
+header > nav a{
+  text-decoration: none;
+  color: var(--black);
+}
+
+body > section.banner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 60px;
+  margin-bottom: 40px;
+  padding: 0 50px 0 80px;
+  border-radius: 30px;
+  background-color: #c2c8da38;
+  height: 600px;
+}
+
+body > section.banner h1{
+  font-size: 60px;
+  font-family: 'Poppins Black', 'Courier New', Courier, monospace;
+  margin: 0;
+  width: 340px;
+}
+
+body > section.banner > .content{
+  z-index: 1;
+}
+
+body > section.banner > .content > p{
+  font-size: 22px;
+  font-family: 'Poppins Medium', 'Courier New', Courier, monospace;
+}
+
+body > section.banner > .content > .shop-now{
+  display: flex;
+  align-items: center;
+}
+
+body > section.banner > .content > .shop-now > img{
+  margin-right: 30px;
+  width: 160px;
+}
+
+body > section.banner > img{
+  height: 80%;
+  align-self: self-end;
+}
+
+/*
+  END OF HEADER & BANNER
+*/
+
+
+/*
+  PARTNERS
+*/
+
+section.partners{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0;
+}
+
+section.partners img{
+  height: 40px;
+}
+
+/*
+  END OF PARTNERS
+*/
+
+
+/*
+  NEW ARRIVALS
+*/
+
+section.newarrivals{
+  padding: 40px 60px;
+}
+
+section.newarrivals .articles{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.newarrivals .articles .article{
+  width: 100%;
+  margin-right: 40px;
+}
+
+section.newarrivals .articles .article:last-child{
+  margin-right: 0;
+}
+
+section.newarrivals .articles .article > img{
+  width: 100%;
+}
+
+section.newarrivals .articles .article > .infos{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.newarrivals .articles .infos img{
+  height: 20px;
+  cursor: pointer;
+}
+
+section.newarrivals .articles .description h3,
+section.newarrivals .articles .description p{
+  margin: 0
+}
+
+/*
+  END OF NEW ARRIVALS
+*/
+
+/*
+  PAYDAY
+*/
+
+section.payday{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #c2c8da38;
+  height: 700px;
+  /* background-color: var(--primary); */
+}
+
+
+section.payday h1{
+  font-size: 60px;
+  font-family: 'Poppins Black', 'Courier New', Courier, monospace;
+  margin: 0;
+  width: 340px;
+}
+
+section.payday > .content{
+  z-index: 1;
+}
+
+section.payday > .content > p{
+  font-size: 22px;
+  font-family: 'Poppins Medium', 'Courier New', Courier, monospace;
+}
+
+section.payday > .content > .shop-now{
+  display: flex;
+  align-items: center;
+}
+
+
+
+section.payday > img{
+  height: 100%;
+  margin-right: 70px;
+  align-self: self-end;
+}
+
+
+/*
+  END OF PAYDAY
+*/
+
+
+/*
+  MOBILE APP
+*/
+
+section.mobile-app{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  margin: 0 60px;
+  height: 700px;
+}
+
+section.mobile-app h2{
+  font-family: 'Poppins Black', 'Courier New', Courier, monospace;
+  font-size: 40px;
+}
+
+section.mobile-app p{
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+section.mobile-app a{
+  text-decoration: none;
+}
+
+section.mobile-app a img{
+  height: 60px;
+}
+
+section.mobile-app > img{
+  height: 100%;
+}
+
+
+
+/*
+  END OF MOBILE APP
+*/
+
+
+
+/*
+  NEWSLETTER
+*/
+
+section.newsletter{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+section.newsletter h2{
+  font-family: 'Poppins Black', 'Courier New', Courier, monospace;
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+}
+
+section.newsletter p{
+  font-size: 20px;
+  margin: 10px;
+}
+
+section.newsletter form.email{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  overflow: hidden;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+section.newsletter form input{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Poppins Regular';
+  font-size: 18px;
+  padding: 8px 13px;
+}
+
+section.newsletter form button{
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  outline: none;
+  font-family: 'Poppins Regular';
+  font-size: 18px;
+  border-radius: 4px;
+  padding: 0 15px;
+  height: 44px;
+  cursor: pointer;
+}
+
+/*
+  END OF NEWSLETTER
+*/
+
+
+/*
+  FOOTER
+*/
+
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 60px 70px;
+}
+
+footer > *{
+  width: 50%;
+}
+
+footer .fashion h2 a{
+  color: var(--white);
+  text-decoration: none;
+}
+
+footer .fashion p{
+  color: var(--secondary);
+  opacity: .7;
+  width: 300px;
+  margin: 40px 0;
+}
+
+footer .fashion .social img{
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+footer .fashion .social img:hover{
+  opacity: .4;
+}
+
+footer .more-infos{
+  display: flex;
+}
+
+footer .more-infos .column{
+  width: 33%;
+}
+
+footer .more-infos .column h3{
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+footer .more-infos ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .more-infos ul li{
+  margin-bottom: 30px;
+}
+
+footer .more-infos a{
+  text-decoration: none;
+  color: var(--secondary);
+  opacity: .7;
+}
+
+footer .more-infos li:hover a{
+  color: var(--white);
+  opacity: 1;
+}
+
+
+/*
+  END OF FOOTER
+*/
